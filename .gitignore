@@ -1,0 +1,11 @@
+# app specific
+/downloaded
+client_secret.json
+app_secrets.py
+
+# intellij specific
+.idea/
+
+# python specific
+__pycache__/
+*.pyc
