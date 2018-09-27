@@ -76,10 +76,6 @@ def oauth2_callback():
     return redirect(url_for('index'))
 
 
-if __name__ == '__main__':
-    app.run()
-
-
 def credentials_to_dict(credentials):
     return {
         'token': credentials.token,
@@ -96,3 +92,7 @@ def valid_credentials():
     return 'credentials' in session and \
            'expiry' in session['credentials'] and \
            datetime.datetime.now() < session['credentials']['expiry']
+
+
+if __name__ == '__main__':
+    app.run()
